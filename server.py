@@ -16,7 +16,7 @@ def connection_handler(c ,a):
 
 	while True:
 		
-		data = c.recv(1024)
+		data = c.recv(2048-1024)
 		#recieve data packets of size 1024
 		for connection in connections:
 			connection.send(bytes(data))
